@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hamsterly Social Club - What's On?</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  margin: 0;
+}
+
+.menu {
+  display: none;
+}
+
+.w3-display-middle .w3-text-white {
+  font-family: Tahoma, sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="index.html" class="w3-button w3-block w3-black">Home</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="whatson.html" class="w3-button w3-block w3-black">What's on?</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="events.html" class="w3-button w3-block w3-black">Events</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="contactus.html" class="w3-button w3-block w3-black">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- About Container -->
+<div class="w3-container w3-sand " id="about">
+    <div class="w3-content" style="max-width:700px">
+        <h2 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Contact Us</span></h2>
+        <p>Get in touch with us:</p>
+        <!-- Contact Form -->
+        <form action="submit_contact_form.php" method="post">
+            <div class="w3-section">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="w3-section">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="w3-section">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="w3-section">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="w3-button w3-black w3-hover-teal">Send</button>
+        </form>  
+        
+    </div>
+</div>
+
+<footer style="display: flex; justify-content: space-between;">
+    <p>&copy; 2024 Hamsterly Social Club.</p>
+    <p>Website by Joe Bainbridge | <a href="mailto:enquiries@joe-bainbridge.com">enquiries@joe-bainbridge.com</a></p>
+</footer>
+
+</body>
+</html>

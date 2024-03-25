@@ -1,53 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Website</title>
-    <style>
+<title>Hamsterly Social Club</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("exterior.png");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+.w3-display-middle .w3-text-white {
+  font-family: Tahoma, sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* Style for the opening times */
+.opening-times {
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* slightly transparent black background */
+  color: white; /* white text color */
+}
+
+.opening-times p {
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Align text to the left */
+}
+
+</style>
 </head>
 <body>
 
-<header>
-    <h1>Welcome</h1>
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="index.html" class="w3-button w3-block w3-black">Home</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="whatson.html" class="w3-button w3-block w3-black">What's on?</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="events.html" class="w3-button w3-block w3-black">Events</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="contactus.html" class="w3-button w3-block w3-black">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+
+  <div class="opening-times">
+    <p>17:00-23:00 Mon</p>
+    <p>Tue Closed</p>
+    <p>Wed-Fri 17:00-23:00</p>
+    <p>Sat 14:00-23:00</p>
+    <p>Sun 14:00-23:30</p>
+  </div>
+
+  <div class="w3-display-middle w3-center">
+    <!-- Replace the text with your logo image -->
+    <img src="logo.png" alt="Hamsterly Social Club Logo" style="filter: brightness(125%) contrast(175%);">
+  </div>
+
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-tag">Hamsterley,<br>Bishop Auckland,<br>DL13 3QF</span>
+  </div>
 </header>
 
-<main>
-    <p>Hello.</p>
-    <p>Cool paragraph!</p>
-</main>
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-large">
 
-<footer>
-    <p>&copy; 2024 Joe Bainbridge Inc.</p>
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">About Us</span></h5>
+    <p>Our club offers a warm and friendly environment for members and guests alike. Whether you’re seeking a refreshing pint of real ale, a glass of fine wine, or a relaxing spot to socialize, our doors are open to you. Join us for camaraderie, good times, and community spirit. Cheers! 🍻</p>
+  </div>
+  <div class="w3-display-container w3-center">
+    <img src="interior.png" style="width:100%;max-width:1000px;margin:auto;" class="w3-margin-top">
+  </div>
+  <p></p>
+  <br>
+</div>
+
+<!-- End page content -->
+</div>
+</body>
+
+<footer style="display: flex; justify-content: space-between;">
+  <p>&copy; 2024 Hamsterly Social Club.</p>
+  <p>Website by Joe Bainbridge | <a href="mailto:enquiries@joe-bainbridge.com">enquiries@joe-bainbridge.com</a></p>
 </footer>
 
-</body>
+
 </html>
