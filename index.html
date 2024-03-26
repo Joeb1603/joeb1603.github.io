@@ -8,11 +8,22 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 body, html {
   height: 100%;
-  font-family: "Inconsolata", sans-serif;
+  /*font-family: "Inconsolata", sans-serif;*/
+  font-family: Cambria, serif;
 }
+
+
+.w3-bar-item {
+    /*font-family: Cambria, serif;*/
+    /*font-family:"Roboto", sans-serif*/
+    font-family: "Noto Serif", serif;
+}
+
 
 .bgimg {
   background-position: center;
@@ -35,14 +46,31 @@ body, html {
   position: absolute;
   bottom: 0px;
   left: 10px;
-  padding: 20px;
+  padding: 10px;
   background-color: rgba(0, 0, 0, 0.7); /* slightly transparent black background */
   color: white; /* white text color */
 }
 
 .opening-times p {
   margin: 0; /* Remove default margin */
-  text-align: left; /* Align text to the left */
+  text-align: center; /* Align text to the left */
+  font-family: "Inconsolata", sans-serif;
+}
+
+/* Style for the opening times */
+.location {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* slightly transparent black background */
+  color: white; /* white text color */
+}
+
+.location p {
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Align text to the left */
+  font-family: "Inconsolata", sans-serif;
 }
 
 .w3-bar-item img {
@@ -51,14 +79,13 @@ body, html {
     height: auto; 
 }
 
-@media only screen and (max-width: 542px) {
+@media only screen and (max-width: 635px) {
   .hide-super-small {
       display: none !important;
   }
 }
 
-
-@media only screen and (min-width: 542px) and (max-width: 749px) {
+@media only screen and (min-width: 636px) and (max-width: 749px) {
   .hide-small {
       display: none !important;
   }
@@ -76,6 +103,49 @@ body, html {
   }
 }
 
+@media only screen and (max-width: 300px) {
+  .opening-times {
+    left: 0; /* Align with left edge */
+    right: auto; /* Reset right */
+    padding: 0;
+    font-size: 12px; /* Reduce font size */
+  }
+  .location {
+    left: auto; /* Reset left */
+    right: 0; /* Align with right edge */
+    padding: 0;
+    font-size: 12px; /* Reduce font size */
+  }
+}
+
+.w3-bar {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Distribute items evenly */
+  height: 100px;
+}
+
+.w3-bar-item.left {
+  margin-right: auto; /* Push items to the left */
+}
+
+.w3-bar-item.right {
+  margin-left: auto; /* Push items to the right */
+}
+
+.w3-bar-item img {
+  max-height: 75px; /* Increase max-height for the logo */
+}
+.w3-bar-item {
+  /* Add font-weight: bold; */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Increase font size of the navigation button icon */
+.fa-bars {
+  font-size: 45px; /* Adjust the size as needed */
+}
 
 
 </style>
@@ -84,27 +154,26 @@ body, html {
 
 
 
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-padding w3-card"> <!-- style="letter-spacing:4px;"-->
-      <!-- Use both text and image initially, but hide the text on small screens -->
+  <div class="w3-bar w3-white w3-padding w3-card w3-top">
+    <!-- Left-aligned items -->
+    <div class="w3-bar-item left">
+        <a class="hide-small hide-super-small">Hamsterly Social Club</a>
+        <a class="hide-large hide-medium"><img src="logo-navbar.png" alt="Hamsterly Social Club Logo"></a>
+    </div>
+    
+    <!-- Right-aligned items -->
+    <div class="w3-bar-item right hide-super-small">
+        <a href="index.html" class="w3-button">Home</a>
+        <a href="whatson.html" class="w3-button">Schedule</a>
+        <a href="events.html" class="w3-button">Events</a>
+        <a href="contactus.html" class="w3-button">Contact</a>
+    </div>
 
-        <div class="idk">
-            <a href="#home" class="w3-bar-item w3-button hide-small hide-super-small">Hamsterly Social Club</a>
-            <a href="#home" class="w3-bar-item w3-button hide-large hide-medium"><img src="logo-navbar.png" alt="Hamsterly Social Club Logo"></a>
-        </div>
-        <!-- Right-sided navbar links. Hide them on small screens -->
-        <div class="w3-right hide-super-small">
-            <a href="index.html" class="w3-bar-item w3-button">Home</a>
-            <a href="whatson.html" class="w3-bar-item w3-button">Schedule</a>
-            <a href="events.html" class="w3-bar-item w3-button">Events</a>
-            <a href="contactus.html" class="w3-bar-item w3-button">Contact</a>
-        </div>
-        <div>
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right hide-large hide-medium hide-small" onclick="w3_open()">
-                <i class="fa fa-bars "></i>
-              </a>
-        </div>
-        
+    <!-- Mobile menu icon -->
+    <div>
+        <a href="javascript:void(0)" class="w3-button hide-large hide-medium hide-small" onclick="w3_open()">
+            <i class="fa fa-bars "></i>
+        </a>
     </div>
 </div>
 
@@ -122,21 +191,26 @@ body, html {
 <header class="bgimg w3-display-container" id="home">
 
   <div class="opening-times">
-    <p>17:00-23:00 Mon</p>
+    <p>Mon 17:00-23:00</p>
     <p>Tue Closed</p>
     <p>Wed-Fri 17:00-23:00</p>
     <p>Sat 14:00-23:00</p>
     <p>Sun 14:00-23:30</p>
   </div>
 
+  
   <div class="w3-display-middle w3-center">
     <!-- Replace the text with your logo image -->
-    <img src="logo.png" alt="Hamsterly Social Club Logo" style="filter: brightness(125%) contrast(175%);">
+    <img src="logo.png" alt="Hamsterly Social Club Logo" style="filter: brightness(125%) contrast(175%); max-width: 100%; width: 90vw; max-width: 500px; margin: auto;">
+  </div>
+  
+  <div class="location">
+    <p>Hamsterley</p>
+    <p>Bishop Auckland</p>
+    <p>DL13 3QF</p>
   </div>
 
-  <div class="w3-display-bottomright w3-center w3-padding-large">
-    <span class="w3-tag">Hamsterley,<br>Bishop Auckland,<br>DL13 3QF</span>
-  </div>
+
 </header>
 
 <!-- Add a background color and large text to the whole page -->
@@ -151,7 +225,6 @@ body, html {
   <div class="w3-display-container w3-center">
     <img src="interior.png" style="width:100%;max-width:1000px;margin:auto;" class="w3-margin-top">
   </div>
-  <p></p>
   <br>
 </div>
 
