@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body, html {
   height: 100%;
@@ -43,27 +45,78 @@ body, html {
   text-align: left; /* Align text to the left */
 }
 
+.w3-bar-item img {
+    max-width: 100%;
+    max-height: 40px; 
+    height: auto; 
+}
+
+@media only screen and (max-width: 542px) {
+  .hide-super-small {
+      display: none !important;
+  }
+}
+
+
+@media only screen and (min-width: 542px) and (max-width: 749px) {
+  .hide-small {
+      display: none !important;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1024px) {
+  .hide-medium {
+      display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .hide-large {
+      display: none !important;
+  }
+}
+
+
+
 </style>
 </head>
 <body>
 
-<!-- Links (sit on top) -->
+
+
 <div class="w3-top">
-  <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s3">
-      <a href="index.html" class="w3-button w3-block w3-black">Home</a>
+    <div class="w3-bar w3-white w3-padding w3-card"> <!-- style="letter-spacing:4px;"-->
+      <!-- Use both text and image initially, but hide the text on small screens -->
+
+        <div class="idk">
+            <a href="#home" class="w3-bar-item w3-button hide-small hide-super-small">Hamsterly Social Club</a>
+            <a href="#home" class="w3-bar-item w3-button hide-large hide-medium"><img src="logo-navbar.png" alt="Hamsterly Social Club Logo"></a>
+        </div>
+        <!-- Right-sided navbar links. Hide them on small screens -->
+        <div class="w3-right hide-super-small">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="whatson.html" class="w3-bar-item w3-button">Schedule</a>
+            <a href="events.html" class="w3-bar-item w3-button">Events</a>
+            <a href="contactus.html" class="w3-bar-item w3-button">Contact</a>
+        </div>
+        <div>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right hide-large hide-medium hide-small" onclick="w3_open()">
+                <i class="fa fa-bars "></i>
+              </a>
+        </div>
+        
     </div>
-    <div class="w3-col s3">
-      <a href="whatson.html" class="w3-button w3-block w3-black">What's on?</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="events.html" class="w3-button w3-block w3-black">Events</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="contactus.html" class="w3-button w3-block w3-black">Contact Us</a>
-    </div>
-  </div>
 </div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left hide-medium hide-large hide-small" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+    <a href="#whatson.html" onclick="w3_close()" class="w3-bar-item w3-button">Schedule</a>
+    <a href="#events.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
+    <a href="#contactus.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+
+  </nav>
+
 
 <!-- Header with image -->
 <header class="bgimg w3-display-container" id="home">
@@ -106,10 +159,24 @@ body, html {
 </div>
 </body>
 
-<footer style="display: flex; justify-content: space-between;">
-  <p>&copy; 2024 Hamsterly Social Club.</p>
-  <p>Website by Joe Bainbridge | <a href="mailto:enquiries@joe-bainbridge.com">enquiries@joe-bainbridge.com</a></p>
-</footer>
 
+<script>
+    
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+    
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+    </script>
 
 </html>
