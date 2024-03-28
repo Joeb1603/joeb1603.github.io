@@ -25,6 +25,7 @@ body, html {
 }
 
 
+
 .bgimg {
   background-position: center;
   background-size: cover;
@@ -103,6 +104,29 @@ body, html {
   }
 }
 
+@media only screen and (min-width: 1251px) {
+  .hide-bottom-image {
+      display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .hide-top-image {
+      display: none !important;
+  }
+}
+
+
+
+@media only screen and (min-width: 651px) and (max-width: 749px) {
+  .hide-small {
+      display: none !important;
+  }
+}
+
+
+
+
 @media only screen and (max-width: 300px) {
   .opening-times {
     left: 0; /* Align with left edge */
@@ -147,14 +171,49 @@ body, html {
   font-size: 45px; /* Adjust the size as needed */
 }
 
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+.w3-card {
+    max-width: 1200px;
+    margin: auto;
+    width: 90%; /* Adjust width as needed */
+  }
+
+    @media (min-width: 350px) {
+      .center-box {
+        align-items: center;
+      }
+
+      .w3-card {
+        display: flex;
+      }
+
+      .w3-twothird {
+        flex: 1;
+        padding-right: 20px;
+      }
+
+      .w3-third {
+        flex: 1;
+        padding-left: 20px;
+      }
+    }
+
+    /* Correct navbar width */
+    .w3-bar {
+      width: 100%;
+    }
 </style>
 </head>
 <body>
 
 
 
-  <div class="w3-bar w3-white w3-padding w3-card w3-top">
+  <div class="w3-bar w3-white w3-padding w3-top">
     <!-- Left-aligned items -->
     <div class="w3-bar-item left">
         <a class="hide-small hide-super-small">Hamsterly Social Club</a>
@@ -219,15 +278,39 @@ body, html {
 <!-- About Container -->
 <div class="w3-container" id="about">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">About Us</span></h5>
+    <h5 class="w3-center w3-padding-64" style="font-size: 36px;"><span class="w3-tag w3-wide">Welcome!</span></h5>
+    <!--<h5 style="font-size: 36px;"><span>Welcome!</span></h5>-->
     <p>Our club offers a warm and friendly environment for members and guests alike. Whether you’re seeking a refreshing pint of real ale, a glass of fine wine, or a relaxing spot to socialize, our doors are open to you. Join us for camaraderie, good times, and community spirit. Cheers! 🍻</p>
   </div>
   <div class="w3-display-container w3-center">
-    <img src="interior.png" style="width:100%;max-width:1000px;margin:auto;" class="w3-margin-top">
+    
   </div>
   <br>
 </div>
 
+<div class="w3-container center-box">
+  <div class="w3-card w3-padding">
+    <div class="w3-twothird">
+      <h1 class="w3-text-teal">The newly renovated bar</h1>
+      <p>Welcome to the newly renovated bar at Hamsterly Club.
+         Here, history and modernity blend seamlessly within stone walls adorned with rustic decorations. 
+         The bar offers an intimate and cozy atmosphere, where comfortable seating—plush sofas with red cushions and wicker chairs around wooden tables—invites you to relax. 
+         Elegant lighting fixtures cast a warm glow, while a crackling fireplace adds a touch of homeliness. 
+         Admire the mounted animal skulls and antlers, a nod to the club’s heritage. 
+         Whether you’re enjoying a quiet drink or engaging in lively conversation, the Hamsterly Club bar provides the perfect setting for an unforgettable experience. 
+        Visit us today and experience the timeless charm of our newly renovated bar! 🥂🔥🍷</p>
+        <p style="height: 20px;"></p>
+        <img src="interior.png" style="width:100%;max-width:100%;" class="w3-margin-top hide-bottom-image">
+      </div>
+    <div class="w3-third hide-top-image">
+      <p style="height: 20px;"></p>
+      <img src="interior.png" style="width:100%;max-width:100%;" class="w3-margin-top ">
+    </div>
+    
+  </div>
+</div>
+
+<p>Hello<br></p>
 <!-- End page content -->
 </div>
 </body>
